@@ -1,5 +1,11 @@
 # vue-hello-world
 
+POC
+- Sub Route
+- Multi Language
+- Request API
+
+
 ## Project setup
 ```
 npm install
