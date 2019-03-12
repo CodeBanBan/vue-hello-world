@@ -14,6 +14,11 @@ export default [
     component: () => import(/* webpackChunkName: "about" */ './sub/Sub1.vue')
   },
   {
+    path: '/about/sub1/:title',
+    name: 'about-sub1',
+    component: () => import(/* webpackChunkName: "about" */ './sub/Sub1.vue')
+  },
+  {
     path: '/about/sub2',
     name: 'about-sub2',
     component: () => import(/* webpackChunkName: "about" */ './sub/Sub2.vue')
