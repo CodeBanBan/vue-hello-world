@@ -4,7 +4,10 @@ import Sub2 from './sub/Sub2.vue'
 export default [
   {
     path: '',
-    component: Sub1
+    components: {
+      default: Sub1,
+      view2: Sub2
+    }
   },
   {
     path: 'sub1',
