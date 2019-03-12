@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-      <h1>This is Sub ###1 : {{$route.params.title || '[No Title]'}}</h1>
+      <h1>This is Sub ###1 : {{title || '[No Title]'}}</h1>
     </div>
 </template>
 
@@ -8,6 +8,7 @@
 
 export default {
   name: 'sub1',
+  props: ['title'],
   components: {}
 }
 </script>
