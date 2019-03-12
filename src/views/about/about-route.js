@@ -1,26 +1,24 @@
+import Sub1 from './sub/Sub1.vue'
+import Sub2 from './sub/Sub2.vue'
 
 export default [
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ './sub/Sub1.vue')
+    path: '',
+    component: Sub1
   },
   {
-    path: '/about/sub1',
+    path: 'sub1',
     name: 'about-sub1',
-    component: () => import(/* webpackChunkName: "about" */ './sub/Sub1.vue')
+    component: Sub1
   },
   {
-    path: '/about/sub1/:title',
-    name: 'about-sub1',
-    component: () => import(/* webpackChunkName: "about" */ './sub/Sub1.vue')
-  },
-  {
-    path: '/about/sub2',
+    path: 'sub2',
     name: 'about-sub2',
-    component: () => import(/* webpackChunkName: "about" */ './sub/Sub2.vue')
+    component: Sub2
+  },
+  {
+    path: 'sub1/:title',
+    name: 'about-sub1',
+    component: Sub1
   }
 ]
