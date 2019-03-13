@@ -1,3 +1,17 @@
+<i18n>
+{
+  "en": {
+    "greet": "Greet.........",
+    "message": {
+      "localHello": "Local Hello world !!!!"
+    }
+  },
+  "th": {
+    "greet": "โย่วววววววววววว"
+  }
+}
+</i18n>
+
 <template>
   <div class="home">
     <h2>Hello i18n</h2>
@@ -7,12 +21,17 @@
 
     <div>
       <h3>Basic Usage</h3>
-      <p>{{ $t('message.hello', { lang: $i18n.locale }) }}</p>
+      <p>
+        {{ $t('message.hello', { lang: $i18n.locale }) }} /
+        {{ $t('greet') }} /
+        {{ $t('message.localHello') }}
+      </p>
       <p v-html="$t('message.hello', { lang: $i18n.locale })"></p>
     </div>
 
     <div>
       <h3>Use Directive instead of $t</h3>
+      <p v-t="'greet'"></p>
       <p v-t="'message.hello'"></p>
       <p v-t="{
         path: 'message.hello',
