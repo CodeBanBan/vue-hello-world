@@ -14,7 +14,6 @@
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
-    "@kazupon/vue-i18n-loader": "^0.3.0",
     "@vue/cli-plugin-babel": "^3.5.0",
     "@vue/cli-plugin-eslint": "^3.5.0",
     "@vue/cli-plugin-unit-mocha": "^3.5.0",

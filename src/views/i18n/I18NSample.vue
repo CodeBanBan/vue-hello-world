@@ -1,16 +1,3 @@
-<i18n>
-{
-  "en": {
-    "greet": "Greet.........",
-    "message": {
-      "localHello": "Local Hello world !!!!"
-    }
-  },
-  "th": {
-    "greet": "โย่วววววววววววว"
-  }
-}
-</i18n>
 
 <template>
   <div class="home">
@@ -24,7 +11,7 @@
       <p>
         {{ $t('message.hello', { lang: $i18n.locale }) }} /
         {{ $t('greet') }} /
-        {{ $t('message.localHello') }}
+        {{ $t('localMessage.localHello') }}
       </p>
       <p v-html="$t('message.hello', { lang: $i18n.locale })"></p>
     </div>
@@ -49,9 +36,13 @@
 </template>
 
 <script>
+import i18n from './I18NSample.i18n'
 
 export default {
   name: 'i18n-sample',
-  components: {}
+  components: {},
+  i18n: {
+    messages: i18n
+  }
 }
 </script>
