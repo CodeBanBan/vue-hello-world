@@ -12,7 +12,6 @@ const routes = [
     name: 'home',
     component: Home
   },
-  // ...AboutRoute
   {
     path: '/about',
     // route level code-splitting
@@ -25,6 +24,10 @@ const routes = [
     //   console.log(`Before route about..... ${to.name}`)
     //   next(false)
     // }
+  },
+  {
+    path: '/i18n-sample',
+    component: () => import(/* webpackChunkName: "i18n-sample" */ './views/i18n/I18NSample.vue')
   }
 ]
 
