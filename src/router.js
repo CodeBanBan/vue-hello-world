@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/home/Home.vue'
+import { AboutMain } from './views/about/about-module'
 import AboutRoute from './views/about/about-route'
 
 Vue.use(Router)
@@ -17,7 +18,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ './views/about/AboutMain.vue'),
+    component: AboutMain, // () => import(/* webpackChunkName: "about" */ './views/about/about-module').AboutMain,
     children: AboutRoute,
     meta: { requiresAuth: true }
     // beforeEnter: (to, from, next) => {

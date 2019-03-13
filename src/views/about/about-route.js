@@ -1,5 +1,4 @@
-import Sub1 from './sub/Sub1.vue'
-import Sub2 from './sub/Sub2.vue'
+import { Sub1, Sub2 } from './about-module'
 
 export default [
   {
