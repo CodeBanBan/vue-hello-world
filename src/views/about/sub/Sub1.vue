@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import jpService from '../../../services/json-placeholder-service'
 
 export default {
   name: 'sub1',
@@ -22,11 +23,11 @@ export default {
     '$route': 'fetchData'
   },
   methods: {
-    fetchData () {
-      console.log('--->>> About Main :: fetch')
-      return fetch('https://jsonplaceholder.typicode.com/todos/1')
-        .then(response => response.json())
-        .then(json => console.log(json))
+    async fetchData () {
+      const result = await jpService.get(1)
+      console.log(result)
+
+      return result
     }
   }
 }
